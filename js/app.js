@@ -16,7 +16,8 @@ function moreContent(){
 The function will hide the contents in the pargraph with the id of `less` after clicking on the `Show Less` link.*/
 function lessContent (){
 	var showLess = document.getElementById('less');
-	showLess.innerHTML = null;
+	//showLess.innerHTML = null;
+	less.style.display = 'none';
 }
 
 //3. Tacocat, The Original Palindrome King
@@ -31,12 +32,14 @@ function mouseOver() {
 function mouseOut() {
     document.getElementById("biggie").style.color = "black";
 }
-function zoom (){
-document.getElementById("biggie").style.zoom=1.5;this.blur();
-
+function zoom() {
+	document.getElementById("biggie").style.zoom=1.5;this.blur();
 }
 
-
+//function zoom (){
+	//var tacocat = document.getElementById ('biggie');
+	//tacocat.style.fontSize = '150%';
+//}
 
 
 //4. McDonalds
@@ -73,32 +76,71 @@ var myQuote = "Our lives are defined by opportunities; even the ones we miss.";
 //document.getElementById("displayQuote").addEventListener(myQuote);
 //var myNewQuote = document.getElementById("displayQuote");
 //myNewQuote.innerHTML = myQuote;
-
-document.addEventListener("click", function(){
+var myButton = document.getElementById('Benjamin');
+myButton.addEventListener("click", function(){
     document.getElementById("displayQuote").innerHTML = myQuote;
 });
 //8. Say It again, Randomly
 /*Create a function that will generate a random quote from the variable below after clicking on the button.*/
 
 var quotes = ["It's a funny thing about comin' home. Looks the same, smells the same, feels the same. You'll realize what's changed is you.", "Momma? Momma? Some days, I feel different than the day before.", "Some people, were born to sit by a river. Some get struck by lightning. Some have an ear for music. Some are artists. Some swim. Some know buttons. Some know Shakespeare. Some are mothers. And some people, dance.", "For what it's worth, it's never too late to be whoever you want to be."];
-
-document.addEventListener("click", function(){
+var myButton2 = document.getElementById('random');
+myButton2.addEventListener("click", function(){
 var randomNumber = Math.floor(Math.random() * (quotes.length));
 document.getElementById("displayQuotes").innerHTML = quotes[randomNumber];
 
 });
+//var quoteBox = document.getElementById('displayQuotes');
+//var quoteButton = documenmt.getElementById('random');
+//function randomQuote (){
+	//var randomNumber = math.floor(math.random() * (quotes.length);
 
+
+//}
 //9. Unlock the Secret to Financial Freedom
 /*Create an event listener that will show and hide the message when clickig on the button.
 */
+var showHideButton = document.getElementById("showHide");
+//var catMoney = document.getElementById("catmoney");
+
+showHideButton.addEventListener("click", toggle);
+	var x = document.getElementById("showmoney");
+	function toggle(){
+	if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }	
+}
+
+//document.getElementById('catmoney').innerHTML = '<img src="http://previews.123rf.com/images/aptypkok/aptypkok1201/aptypkok120100093/11943484-Red-cat-sitting-on-the-dollar-on-the-white-background-Stock-Photo.jpg" />';
+
+/*
+var clickMsg = document.getElementById('showHide')
+clickMsg.addEventListener('mouseover', toggle)
+
+function toggle(){
+  var showSecret = document.getElementById('secret');
+  if(showSecret.style.display === 'none'){
+    showSecret.style.display = 'block';
+  } else {
+    showSecret.style.display = 'none';
+  }
+}
+*/
+
 
 //var startDiv = document.getElementsByClassName('block3 col-sm-4'[2]);
 //console.log (startDiv);
 //var myPic = document.getElementsByTagName('img');
 //console.log (myPic);
-document.getElementById("showHide").addEventListener("click", function(){
+//function show_image(src, width, height, alt) {
+
+//}
+    //var img = document.createElement("img");
+//document.getElementById("showHide").addEventListener("click", function(){
 		//console.log("aloha");
-document.getElementById('catmoney').getElementsByTagName('img', catmoney.src);
+//document.getElementById('catmoney').getElementsByTagName('img');
 //var x = myPic;
    //if (myPic.style.display === 'none') {
         //myPic.style.display = 'block';
@@ -108,4 +150,4 @@ document.getElementById('catmoney').getElementsByTagName('img', catmoney.src);
 
 //document.getElementById("catmoney").innerHTML = myPic;
 
-});
+//});
